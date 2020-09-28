@@ -18,7 +18,7 @@ int DoSearch(int items[], int target, int first, int last) {
 	DoSearch(items, target, first, last);
 }
 
-int BinarySearch::Search(int target, int items[], int length)
+int BinarySearch::Search(int target, int* items, int length)
 {
 	int first = 0;
 	int last = length - 1;
