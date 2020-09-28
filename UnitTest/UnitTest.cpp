@@ -2,6 +2,7 @@
 #include "CppUnitTest.h"
 #include "..\AlgoLib\BinarySearch.h"
 #include "..\AlgoLib\SequentialSearch.h"
+#include "..\AlgoLib\SelectionSort.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -50,5 +51,29 @@ namespace UnitTest
 			Assert::AreNotEqual(7, sequentialSearch.Search(15, items, 7));
 		}
 
+		TEST_METHOD(Selection_Sort_Should_Return_Sorted_Array)
+		{
+			vector<int> items;
+			items.push_back(45);
+			items.push_back(33);
+			items.push_back(69);
+			items.push_back(3);
+			items.push_back(66);
+			items.push_back(101);
+			items.push_back(2);
+			items.push_back(44);
+			items.push_back(2098);
+			items.push_back(8);
+
+			SelectionSort selectionSort;
+
+			vector<int> sortedItems = selectionSort.Sort(items);
+
+			Assert::AreEqual(sortedItems.at(0), 2);
+
+			Assert::AreEqual(sortedItems.at(2), 8);
+
+			Assert::AreEqual(sortedItems.at(9), 2098);
+		}
 	};
 }
