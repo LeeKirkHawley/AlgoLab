@@ -3,6 +3,8 @@
 #include "..\AlgoLib\BinarySearch.h"
 #include "..\AlgoLib\SequentialSearch.h"
 #include "..\AlgoLib\SelectionSort.h"
+#include "..\AlgoLib\Complexity.h"
+#include "..\AlgoLib\InsertionSort.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -74,6 +76,23 @@ namespace UnitTest
 			Assert::AreEqual(sortedItems.at(2), 8);
 
 			Assert::AreEqual(sortedItems.at(9), 2098);
+		}
+
+		TEST_METHOD(Insertion_Sort_Should_Return_Sorted_Array)
+		{
+			const int ARRAY_SIZE = 4;
+			//int surveyData[ARRAY_SIZE] = { 4, 7, 3, 8, 9, 7, 3, 9, 9, 3, 3, 10 };
+			int surveyData[ARRAY_SIZE] = { 4, 7, 3, 8 };
+
+			InsertionSort insertionSort;
+
+
+			insertionSort.Sort(surveyData, ARRAY_SIZE);
+
+			Assert::AreEqual(surveyData[0], 3);
+			Assert::AreEqual(surveyData[1], 4); 
+			Assert::AreEqual(surveyData[2], 7);
+			Assert::AreEqual(surveyData[3], 8);
 		}
 	};
 }

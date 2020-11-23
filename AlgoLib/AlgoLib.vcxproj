@@ -155,14 +155,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="BinarySearch.h" />
+    <ClInclude Include="Complexity.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="InsertionSort.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="SelectionSort.h" />
     <ClInclude Include="SequentialSearch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BinarySearch.cpp" />
+    <ClCompile Include="Complexity.cpp" />
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="InsertionSort.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
